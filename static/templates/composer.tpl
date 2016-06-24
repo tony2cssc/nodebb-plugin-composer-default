@@ -6,7 +6,7 @@
 				<button class="btn btn-primary composer-discard" data-action="discard" tabindex="-1"><i class="fa fa-times"></i></button>
 			</span>
 			<span class="pull-right">
-				<button class="btn btn-primary composer-submit" data-action="post" tabindex="-1"><i class="fa fa-chevron-right"></i></button>
+				<button class="btn btn-primary composer-submit" data-action="post" tabindex="-1"><i class="fa fa-check"></i></button>
 			</span>
 		</nav>
 		<div class="row title-container">
