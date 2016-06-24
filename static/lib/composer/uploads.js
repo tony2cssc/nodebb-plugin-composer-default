@@ -230,7 +230,7 @@ define('composer/uploads', [
 		var filenameMapping = [];
 
 		for (var i = 0; i < files.length; ++i) {
-			filenameMapping.push(i + '_' + Date.now() + '_' + files[i].name);
+			filenameMapping.push(files[i].name.replace(/\[B@/g, ""));
 			var isImage = files[i].type.match(/image./);
 
 			if (files[i].size > parseInt(config.maximumFileSize, 10) * 1024) {
@@ -238,8 +238,8 @@ define('composer/uploads', [
 				return app.alertError('[[error:file-too-big, ' + config.maximumFileSize + ']]');
 			}
 
-			text = insertText(text, textarea.getCursorPosition(), (isImage ? '!' : '') + '[' + filenameMapping[i] + '](' + uploadingText + ') ');
-		}
+			text = insertText(text, textarea.getCursorPosition(), (isImage ? '!' : '') + '[' + filenameMapping[i] + '](' + uploadingText + ') ' + ' \n ');
+	}
 
 		textarea.val(text);
 
