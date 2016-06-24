@@ -32,6 +32,7 @@
 			<!-- ENDIF showHandleInput -->
 			<!-- IF isTopic -->
 			<div class="category-list-container col-lg-3 col-md-12">
+			<div style="padding-left:15px; padding-bottom:5px">板块</div>
 				<select tabindex="3" class="form-control category-list"></select>
 			</div>
 			<!-- ENDIF isTopic -->
@@ -45,17 +46,17 @@
 						<span class="btn spacer"></span>
 						<!-- ELSE -->
 						<!-- IF !formatting.mobile -->
-						<span class="btn btn-link" tabindex="-1" data-format="{formatting.name}" title="{formatting.title}"><i class="{formatting.className}"></i></span>
+						<span class="btn btn-link" tabindex="-1" data-format="{formatting.name}" style="padding: 10px 20px;"><i class="{formatting.className}"  style="font-size: 16px;"></i></span>
 						<!-- ENDIF !formatting.mobile -->
 						<!-- ENDIF formatting.spacer -->
 					<!-- END formatting -->
 
 					<!--[if gte IE 9]><!-->
-						<span class="btn btn-link img-upload-btn hide" data-format="picture" tabindex="-1" title="[[modules:composer.upload-picture]]">
-							<i class="fa fa-cloud-upload"></i>
+							<span class="btn btn-link img-upload-btn hide" style="padding: 10px 20px;" data-format="picture" tabindex="-1">
+							<i class="fa fa-picture-o" style="font-size: 16px;"></i>
 						</span>
-						<span class="btn btn-link file-upload-btn hide" data-format="upload" tabindex="-1" title="[[modules:composer.upload-file]]">
-							<i class="fa fa-upload"></i>
+						<span class="btn btn-link file-upload-btn hide" style="padding: 10px 20px;" data-format="upload" tabindex="-1">
+							<i class="fa fa-upload" style="font-size: 16px;"></i>
 						</span>
 					<!--<![endif]-->
 
@@ -117,7 +118,7 @@
 		</div>
 
 		<!-- IF isTopicOrMain -->
-		<div class="row tag-row">
+		<div class="row tag-row"  style="display: none;">
 			<div class="col-md-12">
 				<div class="tags-container inline-block">
 					<input class="tags" type="text" class="form-control" placeholder="[[tags:enter_tags_here, {minimumTagLength}, {maximumTagLength}]]" tabindex="4"/>
